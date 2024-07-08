@@ -1,7 +1,6 @@
 import './ProductCard.css';
 import ReduxAddToCart from '../ReduxAddToCart';
 import { useRef, useState } from 'react';
-import logo1 from '../../assests/logo1.png';
 function ProductCard({ product }) {
   var a = 10;
   a = a + 1;
@@ -34,7 +33,6 @@ function ProductCard({ product }) {
     <div className="product-card">
       <p onClick={printTitle}> {product.title}</p>
       <p ref={pRef}> {product.price.value}</p>
-      <img src={logo1} />
       <input type="text" onChange={displayOutput} ref={iRef} value={inputV} />
       <p ref={oRef}>Over here the output would arrive - {inputV}</p>
       <ReduxAddToCart product={product} />
